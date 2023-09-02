@@ -5,8 +5,7 @@ const authUser = useAuthUser()
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
-    token: null,
-    user: null
+    token: null
   }),
 
   getters: {
@@ -28,8 +27,9 @@ export const useAuthStore = defineStore('auth', {
       }
     },
 
-    logout ({ state }) {
-      state.token = null
+    logout () {
+      this.token = null
+      this.router.push('/')
     }
   }
 })

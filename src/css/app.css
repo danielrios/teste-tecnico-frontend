@@ -1,3 +1,11 @@
 .bg-background-primary {
   background-color: var(--q-color-background-primary);
 }
+
+.text-labels {
+  color: var(--q-color-labels);
+}
+
+.q-btn {
+  font-weight: normal;
+}
