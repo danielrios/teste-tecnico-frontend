@@ -1,6 +1,6 @@
 import { api } from 'boot/axios'
 
-export default function useApi () {
+export function useApi () {
   const getCompanies = async () => {
     try {
       const response = await api.get('companies')
@@ -24,7 +24,7 @@ export default function useApi () {
   const postCompany = async (companyData) => {
     try {
       const response = await api.post('companies', companyData)
-      return response.data
+      return response
     } catch (error) {
       console.error(error)
       throw error
@@ -34,7 +34,7 @@ export default function useApi () {
   const getCategories = async () => {
     try {
       const response = await api.get('categories')
-      return response.data
+      return response
     } catch (error) {
       console.error(error)
       throw error
@@ -44,7 +44,7 @@ export default function useApi () {
   const getStates = async () => {
     try {
       const response = await api.get('state-cities/states')
-      return response.data
+      return response
     } catch (error) {
       console.error(error)
       throw error
@@ -54,7 +54,7 @@ export default function useApi () {
   const getCitiesByStateId = async (stateId) => {
     try {
       const response = await api.get(`state-cities/cities?state_id=${stateId}`)
-      return response.data
+      return response
     } catch (error) {
       console.error(error)
       throw error
@@ -64,7 +64,7 @@ export default function useApi () {
   const getCityByCoordinates = async (latitude, longitude) => {
     try {
       const response = await api.get(`state-cities/city?latitude=${latitude}&longitude=${longitude}`)
-      return response.data
+      return response
     } catch (error) {
       console.error(error)
       throw error

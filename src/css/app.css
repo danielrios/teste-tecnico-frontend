@@ -2,10 +2,26 @@
   background-color: var(--q-color-background-primary);
 }
 
+.bg-background {
+  background-color: var(--q-color-background);
+}
+
+.bg-background-light {
+  background-color: var(--q-color-background-light);
+}
+
 .text-labels {
   color: var(--q-color-labels);
 }
 
+.bg-background-labels {
+  background-color: var(--q-color-labels);
+}
+
 .q-btn {
   font-weight: normal;
+}
+
+.map {
+  overflow: auto;
 }
